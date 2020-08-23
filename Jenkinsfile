@@ -24,7 +24,7 @@ node {
     } 
     }
     stage('Testing'){
-      sh 'check_elasticsearch_data_flow'
+      sh './check_elasticsearch_data_flow'
     }
     
 }
