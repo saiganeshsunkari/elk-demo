@@ -24,6 +24,7 @@ node {
     } 
     }
     stage('Testing'){
+      sh 'chmod +X ./check_elasticsearch_data_flow'  
       sh './check_elasticsearch_data_flow'
     }
     
