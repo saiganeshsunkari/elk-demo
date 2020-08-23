@@ -23,5 +23,8 @@ node {
       //sh 'kubectl apply -f es-dep.yaml --insecure-skip-tls-verify'
     } 
     }
+    stage('Testing'){
+      sh 'check_elasticsearch_data_flow'
+    }
     
 }
