@@ -19,7 +19,7 @@ node {
       sh 'kubectl apply -f beats/filebeat/ --namespace=test --insecure-skip-tls-verify'
       sh 'kubectl apply -f beats/metricbeat/ --namespace=test --insecure-skip-tls-verify'
       sh 'kubectl apply -f beats/auditbeat/ --namespace=test --insecure-skip-tls-verify'
-      sh 'kubectl delete -f beats/heartbeat/ --namespace=test --insecure-skip-tls-verify'
+      sh 'kubectl apply -f beats/heartbeat/ --namespace=test --insecure-skip-tls-verify'
       sh 'kubectl get pods -n test --insecure-skip-tls-verify --insecure-skip-tls-verify'
       //sh 'kubectl apply -f es-dep.yaml --insecure-skip-tls-verify'
     } 
