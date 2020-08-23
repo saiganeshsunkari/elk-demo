@@ -23,9 +23,9 @@ node {
       //sh 'kubectl apply -f es-dep.yaml --insecure-skip-tls-verify'
     } 
     }
-    stage('Testing'){
-      sh 'chmod +x elk/check_elasticsearch_data_flow'  
-      sh 'elk/check_elasticsearch_data_flow'
-    }
+  //  stage('Testing'){
+  //    sh 'chmod +x elk/check_elasticsearch_data_flow'  
+  //    sh 'elk/check_elasticsearch_data_flow'
+  //  }
     
 }
