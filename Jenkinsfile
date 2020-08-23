@@ -13,9 +13,9 @@ node {
     ){
       //sh 'kubectl config view'
       sh 'ls -la'
-      sh 'kubectl apply -f elk-demo/elk/elasticsearch.yml --namespace=test --insecure-skip-tls-verify'
-      sh 'kubectl apply -f elk-demo/elk/kibana.yml --namespace=test --insecure-skip-tls-verify'
-      sh 'kubectl apply -f elk-demo/elk/logstash-dep.yaml --namespace=test --insecure-skip-tls-verify'
+      sh 'kubectl apply -f elk/elasticsearch.yml --namespace=test --insecure-skip-tls-verify'
+      sh 'kubectl apply -f elk/kibana.yml --namespace=test --insecure-skip-tls-verify'
+      sh 'kubectl apply -f elk/logstash-dep.yaml --namespace=test --insecure-skip-tls-verify'
       sh 'kubectl apply -f beats/filebeat/ --namespace=test --insecure-skip-tls-verify'
       sh 'kubectl apply -f beats/metricbeat/ --namespace=test --insecure-skip-tls-verify'
       sh 'kubectl apply -f beats/auditbeat/ --namespace=test --insecure-skip-tls-verify'
