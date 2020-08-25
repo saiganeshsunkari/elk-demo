@@ -105,6 +105,7 @@ data:
         - container
         - volume
         - state_container
+        - apiserver
       period: 10s
       host: ${NODE_NAME}
       hosts: ["https://${NODE_NAME}:10250"]
